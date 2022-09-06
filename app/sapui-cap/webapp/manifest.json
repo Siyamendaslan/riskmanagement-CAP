@@ -81,7 +81,7 @@
       }
     },
     "resources": {
-      "css": []
+      "css":[ {"uri": "css/Main.css"}]
     },
     "routing": {
       "config": {

@@ -2,7 +2,9 @@
     controllerName="sapuicap.controller.Worklist"
     xmlns="sap.m"
     xmlns:mvc="sap.ui.core.mvc"
-    xmlns:semantic="sap.f.semantic">
+    xmlns:semantic="sap.f.semantic" 
+    xmlns:cc="sapuicap.controls"
+    xmlns:l="sap.ui.layout">
 
     <semantic:SemanticPage
         id="page"
@@ -16,6 +18,27 @@
         </semantic:titleHeading>
 
         <semantic:content>
+        	<ScrollContainer height="100%" width="100%" horizontal="false" vertical="true">
+								<l:HorizontalLayout id="TileContainerExpanded" allowWrapping="true" content="{/Risks}" class="Hlayout">
+									<cc:CustomCard>
+										<cc:content>
+											<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout pr1" header="{ID}" subheader="{descr}"
+												press="onTilePress" >
+												<TileContent>
+													<ImageContent src="sap-icon://task"/>
+												</TileContent>
+											</GenericTile>
+											<FlexBox alignItems="Start" justifyContent="Center" >
+												<items>
+													<Button type="Accept" icon="sap-icon://edit" press="onEditTask" class="sapUiTinyMarginEnd"/>
+													<Button type="Reject" icon="sap-icon://delete" press="onDelete"/>
+												</items>
+											</FlexBox>
+										</cc:content>
+									</cc:CustomCard>
+								</l:HorizontalLayout>
+							</ScrollContainer>
+        <!--
             <Table
                 id="table"
                 width="auto"
@@ -75,14 +98,12 @@
                                 }"
                                 unit="{descr}" />
                         </cells>
-                    </ColumnListItem>
+                    </ColumnListItem> 
                 </items>
-            </Table>
+            </Table> -->
         </semantic:content>
 
-        <semantic:sendEmailAction>
-            <semantic:SendEmailAction id="shareEmail" press=".onShareEmailPress"/>
-        </semantic:sendEmailAction>
+        
 
     </semantic:SemanticPage>
 

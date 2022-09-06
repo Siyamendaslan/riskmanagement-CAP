@@ -1,0 +1,21 @@
+.Hlayout {
+    display: flex !important;
+    flex-wrap: wrap;
+}
+
+.toolbarButton {
+    width: 20% !important;
+    margin-right: 13% !important;
+}
+
+.pr1 {
+    border-top: 5px solid #427cac;
+}
+
+.pr2 {
+    border-top: 5px solid #e78c07;
+}
+
+.pr3 {
+    border-top: 5px solid #2b7d2b;
+}
