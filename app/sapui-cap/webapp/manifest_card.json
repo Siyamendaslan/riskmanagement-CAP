@@ -1,0 +1,52 @@
+{
+	"sap.app": {
+		"id": "my.new.card",
+		"type": "card",
+		"applicationVersion": {
+		  "version": "1.0.0"
+		}
+	},
+	"sap.card": {
+        "type": "List",
+        "header": {
+			"title": "My Reading List",
+			"subTitle": "Books I would love to read",
+			"icon": {
+				"src": "sap-icon://education"
+            },
+            "actions": [
+				{
+					"type": "Navigation",
+					"url": "https://www.goodreads.com/"
+				}
+            ]
+            
+        },
+        "content": {
+			"data": {
+				"json": [
+					{
+						"Name": "Harry Potter and the Deathly Hallows",
+                        "Author": "JK Rowling"
+					},
+					{
+						"Name": "The Lord of the Rings",
+						"Author": "J.R.R Tolkien"
+					},
+					{
+						"Name": "The Alchemist",
+						"Author": "Paulo Coelho"
+					}
+				]
+			},
+			"item": {
+				"title": {
+					"value": "{Name}"
+				},
+				"description": {
+					"value": "{Author}"
+                }
+            }
+        }
+	}
+}

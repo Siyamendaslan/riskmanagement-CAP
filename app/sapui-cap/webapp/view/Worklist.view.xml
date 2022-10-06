@@ -4,7 +4,8 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns:semantic="sap.f.semantic" 
     xmlns:cc="sapuicap.controls"
-    xmlns:l="sap.ui.layout">
+    xmlns:l="sap.ui.layout"
+    xmlns:w="sap.ui.integration.widgets">
 
     <semantic:SemanticPage
         id="page"
@@ -37,6 +38,7 @@
 										</cc:content>
 									</cc:CustomCard>
 								</l:HorizontalLayout>
+                                <w:Card manifest="./manifest_card.json" width="25%"/>
 							</ScrollContainer>
         <!--
             <Table
